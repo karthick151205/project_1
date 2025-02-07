@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Background Styling */
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Heading */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Input Fields */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #ff758c;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 117, 140, 0.5);
+        }
+
+        /* Gender Selection */
+        .gender-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .gender-container input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Terms Checkbox */
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: #ff758c;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ff5a7a;
+            transform: scale(1.03);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Register Now</h2>
+        <form action="userdb.jsp" method="post">
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter a valid email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm your password" required>
+ 
+            <label>Gender:</label>
+            <div class="gender-container">
+                <input type="radio" id="gender" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="gender" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="gender" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+ 
+            <button type="submit" class="submit-btn">Register</button><br><br>
+              <p style="color:black;">Already have an account <a href="login.jsp" class="account-link">Sign in</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
